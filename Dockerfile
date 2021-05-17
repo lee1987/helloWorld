@@ -14,6 +14,6 @@ RUN pip install -r requirements.txt
 USER nobody
 
 # run
-CMD exec python hello_world/main.py
+CMD exec python -m hello_world.main
 
 EXPOSE $PORT

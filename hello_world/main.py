@@ -1,8 +1,8 @@
-import logging
-import sys
 import time
 
 from prometheus_client import CollectorRegistry, Counter, push_to_gateway
+
+from hello_world.io.echo import Echo
 
 
 def process_request(c: Counter):
@@ -11,27 +11,15 @@ def process_request(c: Counter):
     time.sleep(1)
 
 
-def logger():
-    logger = logging.getLogger('helloWorld')
-    handlers = [logging.StreamHandler(sys.stdout)]
-
-    logging.basicConfig(
-        format='%(asctime)s %(levelname)s %(module)s:%(funcName)s %(message)s',
-        handlers=handlers
-    )
-    logger.setLevel(logging.DEBUG)
-    return logger
-
-
 if __name__ == '__main__':
     # Start up the server to expose the metrics.
-    logger = logger()
-    logger.info('test')
+    echo = Echo('hello world')
+    echo.echo()
 
     registry = CollectorRegistry()
 
     # Start a Counter
-    c = Counter('this_is_a_metric', 'An example counter', registry=registry)
+    c = Counter('this_is_a_metric', 'An hello world counter', registry=registry)
 
     # Generate some requests.
     while True:

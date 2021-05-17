@@ -1,7 +1,11 @@
 Hello world
 
-### info
+## info
 this is a hello world app
+
+## High level design
+
+Use http://asciiflow.com/ to show your diagrams
 
 #  run the app, you do:
 `
