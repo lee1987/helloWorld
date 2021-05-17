@@ -1,0 +1,4 @@
+prometheus-client==0.10.1
+pytest==6.0.*
+behave==1.2.*
+fmt==0.3.*
