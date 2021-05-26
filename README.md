@@ -7,17 +7,22 @@ this is a hello world app
 
 Use http://asciiflow.com/ to show your diagrams
 
-#  run the app, you do:
+# Developing
+1. Create a virtualenv to hold the project (`python3.9 -m venv venv`)
+2. Active the virtual environment just created by: `source venv/bin/activate `
+3. Install the project library: `pip install -r requirements.txt`
+
+#  To run the app in docker, run:
 `
 docker-compose up -d
 `
 
-# take down the app, you do:
+# To take down the app, run:
 `
 docker-compose down -v
 `
 
-# to check the services, you do:
+# To check the services, run:
 `
 docker ps
 `
