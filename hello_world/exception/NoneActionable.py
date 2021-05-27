@@ -1,0 +1,2 @@
+class NoneActionable(Exception):
+    pass
